@@ -1,18 +1,13 @@
 package com.company;
 
 public class Catalogue {
-  private int catalogueSize;
 
   //Create a Class array from Item as a Class is also a datatype
-  private  Item[] catalogue = new Item[catalogueSize];
+  private  Item[] catalogue;
 
 
   public Catalogue(int size){
-    catalogueSize = size;
-  }
-
-  public void setCatalogueSize(int catalogueSize) {
-    this.catalogueSize = catalogueSize;
+    catalogue = new Item[size];
   }
 
   public Item[] getFullList() {

@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -31,7 +32,6 @@ public class Main {
         System.out.println("3. Opret ting til udlån");
         System.out.println("4. Lån ting");
         System.out.println("5. Aflever ting");
-
         // Read user choice
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
