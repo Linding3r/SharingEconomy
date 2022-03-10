@@ -1,6 +1,7 @@
 package com.company;
 
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -39,7 +40,6 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
             scanner.nextLine(); //Scannerbug fix
-            // Decide what to do based on user choice
             if (choice == 1) { // get all items in cataloque
                 Item[] allItems = catalogue.getFullList();
                 for (int i = 0; i < allItems.length; i++) {
@@ -61,10 +61,10 @@ public class Main {
                 String item = scanner.nextLine();
                 Item found = catalogue.findItem(item);
                 catalogue.borrowItem(found);
-                System.out.println(found);
             } else if (choice == 5) { // make item available again
-                // Hardcoded search criteria Skateboard
-                Item found = catalogue.findItem("Skateboard");
+                System.out.println("Please type the item you wish to return:");
+                String item = scanner.nextLine();
+                Item found = catalogue.findItem(item);
                 catalogue.returnItem(found);
             } else if (choice == 9) { //Quit Program
                 run = false;
