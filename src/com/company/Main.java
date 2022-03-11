@@ -1,32 +1,15 @@
 package com.company;
 
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        // Exercise Part 1: Create Catalogue and Item classes
-        // Create a catalogue with size 10
-        Catalogue catalogue = new Catalogue(10);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter how many item you wish your Sharing Catalogue should hold:");
+        Catalogue catalogue = new Catalogue(scanner.nextInt());
 
-        //Create items and add to catalogue
-        Item item1 = new Item("Sport", "Mountainbike");
-        catalogue.addItem(item1);
-        Item item2 = new Item("Sport", "Skateboard");
-        catalogue.addItem(item2);
-        Item item3 = new Item("Clothes", "Smoking");
-        catalogue.addItem(item3);
-        Item item4 = new Item("Clothes", "Dress");
-        catalogue.addItem(item4);
-
-
-        ///////////////////////////////////////////////
-
-        // Exercise Part 2: Make program with user input instead of hardcoded values
-        // Make program able to show menu and handles user choices in loop
-        // Ask user what user wants to do
         boolean run = true;
         while (run) {
             System.out.println("\nWhat would you like?");
@@ -37,7 +20,6 @@ public class Main {
             System.out.println("5. Return item");
             System.out.println("9. Quit");
             // Read user choice
-            Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
             scanner.nextLine(); //Scannerbug fix
             if (choice == 1) { // get all items in cataloque
